@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Mounts a Turnigy 9XR PRO when connected with the bootloader running
+# Makes horrible assumptions about the paths of the devices
+
+udisks --mount /dev/sdb1
+udisks --mount /dev/sdc

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Unounts a Turnigy 9XR PRO when connected with the bootloader running
+# Makes horrible assumptions about the paths of the devices
+
+udisks --unmount /dev/sdb1
+udisks --unmount /dev/sdc

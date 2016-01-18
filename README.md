@@ -1,4 +1,4 @@
-OpenTX configs
-==============
+RC configs
+==========
 
-Configurations for [OpenTX](http://www.open-tx.org) used on my transmitters.
+Configurations for several radio control model related things.

@@ -13,24 +13,24 @@
   <UseFiveChannels>false</UseFiveChannels>
   <IgnorePitchThrust>false</IgnorePitchThrust>
   <IgnoreExpoDualRate>false</IgnoreExpoDualRate>
-  <ServoPlusx>1.275</ServoPlusx>
-  <ServoMinusx>1.275</ServoMinusx>
-  <Offsetx>-0.019607842</Offsetx>
-  <ServoPlusy>1.275</ServoPlusy>
-  <ServoMinusy>1.275</ServoMinusy>
-  <Offsety>-0.019607842</Offsety>
-  <ServoPlusz>1.2623762</ServoPlusz>
-  <ServoMinusz>1.2878788</ServoMinusz>
-  <Offsetz>-0.027450979</Offsetz>
-  <ServoPlusrx>0.6375</ServoPlusrx>
-  <ServoMinusrx>0.0</ServoMinusrx>
-  <Offsetrx>-0.8039216</Offsetrx>
-  <ServoPlusry>1.275</ServoPlusry>
-  <ServoMinusry>1.275</ServoMinusry>
-  <Offsetry>-0.019607842</Offsetry>
-  <ServoPlusrz>1.2878788</ServoPlusrz>
-  <ServoMinusrz>1.275</ServoMinusrz>
-  <Offsetrz>-0.019607842</Offsetrz>
+  <ServoPlusx>1.3858696</ServoPlusx>
+  <ServoMinusx>1.3858694</ServoMinusx>
+  <Offsetx>0.13725495</Offsetx>
+  <ServoPlusy>1.3858696</ServoPlusy>
+  <ServoMinusy>1.3858694</ServoMinusy>
+  <Offsety>0.13725495</Offsety>
+  <ServoPlusz>1.3709679</ServoPlusz>
+  <ServoMinusz>1.4010987</ServoMinusz>
+  <Offsetz>0.12941182</Offsetz>
+  <ServoPlusrx>1.3858696</ServoPlusrx>
+  <ServoMinusrx>1.3858694</ServoMinusrx>
+  <Offsetrx>0.13725495</Offsetrx>
+  <ServoPlusry>1.3858696</ServoPlusry>
+  <ServoMinusry>1.3858694</ServoMinusry>
+  <Offsetry>0.13725495</Offsetry>
+  <ServoPlusrz>1.3858696</ServoPlusrz>
+  <ServoMinusrz>1.3858694</ServoMinusrz>
+  <Offsetrz>0.13725495</Offsetrz>
   <Button1>none</Button1>
   <Button2>none</Button2>
   <Button3>none</Button3>
@@ -58,6 +58,6 @@
   <InvertButton12>false</InvertButton12>
   <InvertButton13>false</InvertButton13>
   <Keyboard>25,togglePauseFunction;57,toggleFPVFunction</Keyboard>
-  <AnalogButton>rx+,3,0,-0.8039216,0.6375,none;ry+,4,0,-0.019607842,1.275,idleUp2;ry-,4,0,-0.019607842,-1.275,idleUp1</AnalogButton>
+  <AnalogButton>rx+,3,0,0.13725495,1.3858696,none;rx-,3,0,0.13725495,-1.3858694,none;ry+,4,0,0.13725495,1.3858696,idleUp2;ry-,4,0,0.13725495,-1.3858694,idleUp1</AnalogButton>
 </project>
 

@@ -223,9 +223,9 @@ profile 0
 aux 0 0 0 1900 2100
 aux 1 1 1 900 1100
 aux 2 2 1 1350 1650
-aux 3 0 0 900 900
-aux 4 0 0 900 900
-aux 5 0 0 900 900
+aux 3 27 3 1900 2100
+aux 4 12 2 1900 2100
+aux 5 25 4 1900 2100
 aux 6 0 0 900 900
 aux 7 0 0 900 900
 aux 8 0 0 900 900
@@ -365,4 +365,3 @@ set yaw_rate = 0
 set tpa_rate = 0
 set tpa_breakpoint = 1500
 
-# 

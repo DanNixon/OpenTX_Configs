@@ -72,7 +72,7 @@ end
 -------------------------------------------------------------------------------
 
 local function init()
-  g_screen = 0
+  g_screen = 1
 
   g_batterySourceOptions = {"VFAS", "Cels"}
   g_batterySource = 0
@@ -104,20 +104,23 @@ local function run(event)
   background()
 
   if event == EVT_MENU_BREAK then
-    g_screen = (g_screen + 1) % 2
+    g_screen = g_screen + 1
+    if g_screen > 2 then
+      g_screen = 1
+    end
   end
 
-  local screenName = "Battery Telemetry"
-  if g_screen == 1 then
-    screenName = screenName .. " - Settings"
+  local screenName = "BATTERY TELEMETRY"
+  if g_screen == 2 then
+    screenName = screenName .. " - SETTINGS"
   end
 
   lcd.clear()
-  lcd.drawScreenTitle(screenName, g_screen + 1, 2)
+  lcd.drawScreenTitle(screenName, g_screen, 2)
 
-  if g_screen == 0 then
+  if g_screen == 1 then
     drawTelemScreen()
-  elseif g_screen == 1 then
+  elseif g_screen == 2 then
     drawSettingsScreen()
   end
 end

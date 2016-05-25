@@ -46,8 +46,8 @@ map TAER1234
 
 # serial
 serial 0 1 115200 57600 0 115200
-serial 1 64 115200 57600 0 115200
-serial 2 32 115200 57600 0 115200
+serial 1 32 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
 
 
 # led
@@ -364,4 +364,3 @@ set pitch_rate = 0
 set yaw_rate = 0
 set tpa_rate = 0
 set tpa_breakpoint = 1500
-

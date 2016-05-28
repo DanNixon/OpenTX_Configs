@@ -1,5 +1,3 @@
-# dump
-
 # version
 # Cleanflight/NAZE 1.12.1 Apr 10 2016 / 19:57:39 (d0c90cf)
 # dump master
@@ -162,7 +160,7 @@ set align_gyro = DEFAULT
 set align_acc = DEFAULT
 set align_mag = DEFAULT
 set align_board_roll = 0
-set align_board_pitch = 0
+set align_board_pitch = 180
 set align_board_yaw = 0
 set max_angle_inclination = 500
 set gyro_lpf = 188HZ
@@ -225,9 +223,9 @@ profile 0
 aux 0 0 0 1900 2100
 aux 1 1 1 900 1100
 aux 2 2 1 1350 1650
-aux 3 12 2 1900 2100
-aux 4 25 3 1900 2100
-aux 5 0 0 900 900
+aux 3 27 4 1900 2100
+aux 4 12 2 1900 2100
+aux 5 25 3 1900 2100
 aux 6 0 0 900 900
 aux 7 0 0 900 900
 aux 8 0 0 900 900

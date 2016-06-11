@@ -1,0 +1,3 @@
+[submodule "OpenTX/SCRIPTS/LIB/INI"]
+	path = OpenTX/SCRIPTS/LIB/INI
+	url = git@github.com:DanNixon/OpenTX_Lua_INI_Parser.git

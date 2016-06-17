@@ -147,9 +147,9 @@
 /********************       FEATURES      *********************/
 // Disable features if you require memory for other features
 // Further configuration may be require elsewhere in config.h + option enabled on GUI
-//#define SBDIRECTION     // Enable/disable sidebar indicators (changes in speed or altitude)
+#define SBDIRECTION     // Enable/disable sidebar indicators (changes in speed or altitude)
 #define HORIZON         // Enable/disable HORIZON indicator
-#define MAPMODE         // Enable/disable MAP MODE - map indication of relative positions of home and aircraft
+//#define MAPMODE       // Enable/disable MAP MODE - map indication of relative positions of home and aircraf
 //#define GPSTIME       // Enable/disable GPS Time functions
 //#define SPORT         // Enable/disable FRSKY S.PORT cell code
 
@@ -205,10 +205,10 @@
 
 
 /********************       Voltage Warning Settings         ************************/
-//#define AUTOCELL                  // Uncomment this to use automatic cell count and voltage warning. Overrides GUI/OSD voltage warning setting. Usefull if using different cell count batteries.
-//#define FC_VOLTAGE_CONFIG         // Additionally uncomment this if you want to use the vbat voltage config with BASEFLIGHT and CLEANFLIGHT on the flight controller (include: min cell voltage, max cell voltage and warning cell voltage)
+#define AUTOCELL                  // Uncomment this to use automatic cell count and voltage warning. Overrides GUI/OSD voltage warning setting. Usefull if using different cell count batteries.
+#define FC_VOLTAGE_CONFIG         // Additionally uncomment this if you want to use the vbat voltage config with BASEFLIGHT and CLEANFLIGHT on the flight controller (include: min cell voltage, max cell voltage and warning cell voltage)
 //The following variables are available for adjustment unless using FC_VOLTAGE_CONFIG 
-#define CELL_VOLTS_WARN 35          // Specify the cell voltage level at which low voltage warning takes place eg. 35 = 3.5 volts per cell
+#define CELL_VOLTS_WARN 36          // Specify the cell voltage level at which low voltage warning takes place eg. 35 = 3.5 volts per cell
 #define CELL_VOLTS_MIN 34           // Specify the cell voltage at which it is considered empty
 #define CELL_VOLTS_MAX 42           // Specify the max normal LIPO cell voltage
 //#define AUTOCELL_VOLTAGE          // Optionally use Main battery Alarm value as individual cell value. i.e. 3.4 = 10.2v on a 3s

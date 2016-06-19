@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-<comment>MWOSD Configuration File  Fri Jun 17 08:52:43 BST 2016</comment>
+<comment>MWOSD Configuration File  Sun Jun 19 12:34:14 BST 2016</comment>
 <entry key="S_CS2">78.0</entry>
 <entry key="S_CS1">65.0</entry>
 <entry key=" - GPS Altitude">0.0</entry>
@@ -35,9 +35,9 @@
 <entry key="S16_AMPMAX">0.0</entry>
 <entry key=" - Coords on Top">1.0</entry>
 <entry key="Display Video Voltage">0.0</entry>
-<entry key="HUD layout High">0.0</entry>
+<entry key="HUD layout High">5.0</entry>
 <entry key="Use Virtual Sensor">0.0</entry>
-<entry key="Display CallSign">1.0</entry>
+<entry key="Display CallSign">0.0</entry>
 <entry key="Video Signal">1.0</entry>
 <entry key="Voltage Adjust">200.0</entry>
 <entry key="Display Compass">1.0</entry>
@@ -62,18 +62,18 @@
 <entry key="EEPROM Loaded">1.0</entry>
 <entry key="x100 mAh Alarm">50.0</entry>
 <entry key="Enable ADC 5v ref">0.0</entry>
-<entry key="Display Side Bars">1.0</entry>
+<entry key="Display Side Bars">0.0</entry>
 <entry key=" - GPS Coords">0.0</entry>
 <entry key="Display Battery Status">0.0</entry>
 <entry key="Display Throttle Position">0.0</entry>
 <entry key="Display Timer">1.0</entry>
 <entry key="RSSI max">1023.0</entry>
 <entry key=" - Heading 360">1.0</entry>
-<entry key="HUD layout Low">0.0</entry>
+<entry key="HUD layout Low">5.0</entry>
 <entry key="Display GPS">0.0</entry>
 <entry key=" - HB Elevation">0.0</entry>
 <entry key="Display Flight Mode">1.0</entry>
-<entry key="HUD layout Mid">0.0</entry>
+<entry key="HUD layout Mid">5.0</entry>
 <entry key="Amp Alarm">100.0</entry>
 <entry key="Display mAh">0.0</entry>
 <entry key="Amps Adjust">150.0</entry>

@@ -1,5 +1,9 @@
 *~
+
+# OpenTX stuff
 backup-*.bin
 opentx-*.bin
 backup-*.hex
 opentx-*.hex
+
+OpenTX/HOURAI/

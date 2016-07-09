@@ -17,4 +17,4 @@ fi
 
 echo "CHANGES:"
 echo
-diff --unchanged-line-format="" --old-line-format="" --new-line-format="%L" "$1" "$BOARD_DEFAULTS"
+diff --unchanged-line-format="" --old-line-format="" --new-line-format="%L" "$BOARD_DEFAULTS" "$1"

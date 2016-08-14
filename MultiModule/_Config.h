@@ -77,7 +77,9 @@ const PPM_Parameters PPM_prot[15] = {
 /* protocol, sub protocol, RX num, power, auto bind, option */
   {MODE_HUBSAN, 0      , 0, P_HIGH, NO_AUTOBIND, 0},
   {MODE_SYMAX , SYMAX  , 0, P_HIGH, NO_AUTOBIND, 0},
-  {MODE_DSM2  , DSM2   , 0, P_HIGH, NO_AUTOBIND, 6}
+  {MODE_FLYSKY, Flysky , 0, P_HIGH, NO_AUTOBIND, 0},
+  {MODE_DSM2  , DSM2   , 0, P_HIGH, NO_AUTOBIND, 6},
+  {MODE_DSM2  , DSMX   , 0, P_HIGH, NO_AUTOBIND, 6}
 };
 
 /*

@@ -1,3 +1,0 @@
-[submodule "OTXLLIB"]
-	path = OpenTX/sd/SCRIPTS/OTXLLIB
-	url = git@github.com:DanNixon/OpenTX_Lua_Lib.git

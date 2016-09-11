@@ -1,7 +1,8 @@
 # version
-# BetaFlight/NAZE 3.0.0 Aug 27 2016 / 06:46:41 (00cad53)
+# BetaFlight/NAZE 3.0.0 Sep 11 2016 / 00:35:30 (a21694b)
 
 # name
+name Suika
 
 # mixer
 
@@ -14,7 +15,6 @@
 feature -RX_PARALLEL_PWM
 feature RX_SERIAL
 feature MOTOR_STOP
-feature SUPEREXPO_RATES
 
 # beeper
 
@@ -55,6 +55,8 @@ rateprofile 0
 # rateprofile
 rateprofile 0
 
+set thr_mid = 25
+set thr_expo = 50
 set roll_srate = 60
 set pitch_srate = 60
 set yaw_srate = 90

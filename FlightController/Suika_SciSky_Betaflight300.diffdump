@@ -1,0 +1,60 @@
+# version
+# BetaFlight/NAZE 3.0.0 Aug 27 2016 / 06:46:41 (00cad53)
+
+# name
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature MOTOR_STOP
+feature SUPEREXPO_RATES
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 1 64 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1900 2100
+aux 1 27 2 1900 2100
+aux 2 1 1 900 1150
+aux 3 2 1 1350 1650
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set motor_pwm_protocol = BRUSHED
+
+# profile
+profile 0
+
+set i_level = 55
+set d_level = 90
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+set roll_srate = 60
+set pitch_srate = 60
+set yaw_srate = 90

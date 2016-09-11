@@ -8,6 +8,6 @@ sync
 echo "done."
 
 echo "Unmount... "
-udisks --unmount /dev/sdb1
-udisks --unmount /dev/sdc
+udisksctl unmount -b /dev/sdb1
+udisksctl unmount -b /dev/sdc
 echo "done."

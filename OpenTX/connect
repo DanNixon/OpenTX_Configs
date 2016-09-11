@@ -4,6 +4,6 @@
 # Makes horrible assumptions about the paths of the devices
 
 echo "Mount... "
-udisks --mount /dev/sdb1
-udisks --mount /dev/sdc
+udisksctl mount -b /dev/sdb1
+udisksctl mount -b /dev/sdc
 echo "done."

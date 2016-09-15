@@ -1,5 +1,5 @@
 # version
-# BetaFlight/OMNIBUS 3.0.0 Sep 11 2016 / 00:36:13 (a21694b)
+# BetaFlight/OMNIBUS 3.0.0 Sep 15 2016 / 09:52:37 (efc14e6)
 
 # name
 name Youmu
@@ -265,7 +265,7 @@ set input_filtering_mode = OFF
 set roll_yaw_cam_mix_degrees = 0
 set max_aux_channels = 6
 set debug_mode = NONE
-set min_throttle = 1070
+set min_throttle = 1100
 set max_throttle = 2000
 set min_command = 1000
 set servo_center_pulse = 1500
@@ -275,7 +275,7 @@ set 3d_deadband_high = 1514
 set 3d_neutral = 1460
 set 3d_deadband_throttle = 50
 set use_unsynced_pwm = OFF
-set motor_pwm_protocol = OFF
+set motor_pwm_protocol = ONESHOT125
 set motor_pwm_rate = 400
 set servo_pwm_rate = 50
 set disarm_kill_switch = ON
@@ -372,11 +372,11 @@ set blackbox_device = SDCARD
 set blackbox_on_motor_test = OFF
 set ledstrip_visual_beeper = OFF
 set osd_video_system = 0
-set osd_main_voltage_pos = -115
+set osd_main_voltage_pos = 62
 set osd_rssi_pos = -1
-set osd_timer_pos = -102
-set osd_throttle_pos = -132
-set osd_cpu_load_pos = -35
+set osd_timer_pos = 110
+set osd_throttle_pos = 32
+set osd_cpu_load_pos = 55
 set osd_vtx_channel_pos = -1
 set osd_voltage_warning_pos = -171
 set osd_armed_pos = -198
@@ -386,6 +386,7 @@ set osd_horizon_sidebars = -1
 set osd_current_draw_pos = -1
 set osd_mah_drawn_pos = -1
 set osd_craft_name_pos = -57
+set osd_altitude_pos = 82
 
 # profile
 profile 0

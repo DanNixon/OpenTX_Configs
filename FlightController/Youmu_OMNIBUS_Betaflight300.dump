@@ -1,5 +1,5 @@
 # version
-# BetaFlight/OMNIBUS 3.0.0 Sep 15 2016 / 09:52:37 (efc14e6)
+# BetaFlight/OMNIBUS 3.0.0 Sep 16 2016 / 11:56:50 (683fdd8)
 
 # name
 name Youmu
@@ -372,6 +372,7 @@ set blackbox_device = SDCARD
 set blackbox_on_motor_test = OFF
 set ledstrip_visual_beeper = OFF
 set osd_video_system = 0
+set osd_units = METRIC
 set osd_main_voltage_pos = 62
 set osd_rssi_pos = -1
 set osd_timer_pos = 110

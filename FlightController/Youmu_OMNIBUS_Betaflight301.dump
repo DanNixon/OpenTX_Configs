@@ -53,7 +53,6 @@ feature VBAT
 feature RX_SERIAL
 feature FAILSAFE
 feature TELEMETRY
-feature CURRENT_METER
 feature LED_STRIP
 feature OSD
 feature BLACKBOX
@@ -378,8 +377,8 @@ set osd_video_system = 0
 set osd_units = METRIC
 set osd_rssi_alarm = 20
 set osd_cap_alarm = 2200
-set osd_time_alarm = 10
-set osd_alt_alarm = 100
+set osd_time_alarm = 5
+set osd_alt_alarm = 25
 set osd_main_voltage_pos = 2388
 set osd_rssi_pos = 1046
 set osd_flytimer_pos = 2452
@@ -387,13 +386,14 @@ set osd_ontime_pos = 2420
 set osd_flymode_pos = 2436
 set osd_throttle_pos = 2404
 set osd_vtx_channel_pos = 200
-set osd_artificial_horizon = 2048
+set osd_crosshairs = 2048
+set osd_artificial_horizon = 0
 set osd_current_draw_pos = 97
-set osd_mah_drawn_pos = 1135
+set osd_mah_drawn_pos = 111
 set osd_craft_name_pos = 396
 set osd_gps_speed_pos = 66
 set osd_gps_sats_pos = 1410
-set osd_altitude = 2372
+set osd_altitude_pos = 2372
 
 # profile
 profile 0

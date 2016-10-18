@@ -48,8 +48,7 @@ set motor_pwm_protocol = BRUSHED
 # profile
 profile 0
 
-set d_pitch = 25
-set d_roll = 25
+set d_roll = 22
 set i_level = 55
 set d_level = 90
 rateprofile 0
@@ -57,6 +56,7 @@ rateprofile 0
 # rateprofile
 rateprofile 0
 
-set roll_srate = 75
+set rc_rate = 155
+set rc_rate_yaw = 120
 set pitch_srate = 75
 set yaw_srate = 90

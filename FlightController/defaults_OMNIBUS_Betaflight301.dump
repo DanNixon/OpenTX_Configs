@@ -1,8 +1,8 @@
 # version
-# BetaFlight/OMNIBUS 3.0.0 Sep 16 2016 / 11:56:50 (683fdd8)
+# BetaFlight/OMNIBUS 3.0.1 Oct  2 2016 / 12:01:01 (1996f16)
 
 # name
-name Youmu
+name -
 
 # mixer
 mixer QUADX
@@ -49,11 +49,10 @@ feature -BLACKBOX
 feature -CHANNEL_FORWARDING
 feature -TRANSPONDER
 feature -AIRMODE
+feature RX_PPM
 feature VBAT
-feature RX_SERIAL
 feature FAILSAFE
-feature TELEMETRY
-feature LED_STRIP
+feature CURRENT_METER
 feature OSD
 feature BLACKBOX
 
@@ -78,21 +77,20 @@ beeper SYSTEM_INIT
 beeper ON_USB
 
 # map
-map TAER1234
+map AETR1234
 
 # serial
 serial 20 1 115200 57600 0 115200
 serial 0 1 115200 57600 0 115200
-serial 1 32 115200 57600 0 115200
-serial 2 64 115200 57600 0 115200
+serial 1 0 115200 57600 0 115200
 
 # led
-led 0 5,0::CO:2
-led 1 4,0::AO:2
-led 2 3,0::CO:2
-led 3 2,0::CO:2
-led 4 1,0::AO:2
-led 5 0,0::CO:2
+led 0 0,0::C:0
+led 1 0,0::C:0
+led 2 0,0::C:0
+led 3 0,0::C:0
+led 4 0,0::C:0
+led 5 0,0::C:0
 led 6 0,0::C:0
 led 7 0,0::C:0
 led 8 0,0::C:0
@@ -176,7 +174,7 @@ mode_color 5 3 13
 mode_color 5 4 10
 mode_color 5 5 3
 mode_color 6 0 6
-mode_color 6 1 2
+mode_color 6 1 10
 mode_color 6 2 1
 mode_color 6 3 0
 mode_color 6 4 0
@@ -188,12 +186,12 @@ mode_color 6 9 0
 mode_color 6 10 0
 
 # aux
-aux 0 0 0 1800 2100
-aux 1 27 3 1800 2100
-aux 2 1 1 900 1100
-aux 3 2 1 1350 1650
-aux 4 12 2 1800 2100
-aux 5 25 4 1800 2100
+aux 0 0 0 900 900
+aux 1 0 0 900 900
+aux 2 0 0 900 900
+aux 3 0 0 900 900
+aux 4 0 0 900 900
+aux 5 0 0 900 900
 aux 6 0 0 900 900
 aux 7 0 0 900 900
 aux 8 0 0 900 900
@@ -265,7 +263,7 @@ set input_filtering_mode = OFF
 set roll_yaw_cam_mix_degrees = 0
 set max_aux_channels = 6
 set debug_mode = NONE
-set min_throttle = 1100
+set min_throttle = 1070
 set max_throttle = 2000
 set min_command = 1000
 set servo_center_pulse = 1500
@@ -293,7 +291,7 @@ set nav_controls_heading = ON
 set nav_speed_min = 100
 set nav_speed_max = 300
 set nav_slew_rate = 30
-set serialrx_provider = SBUS
+set serialrx_provider = SPEK1024
 set sbus_inversion = ON
 set spektrum_sat_bind = 0
 set spektrum_sat_bind_autoreset = 1
@@ -326,9 +324,11 @@ set max_angle_inclination = 700
 set gyro_lpf = OFF
 set gyro_sync_denom = 1
 set gyro_lowpass_level = NORMAL
-set gyro_lowpass = 90
-set gyro_notch_hz = 0
-set gyro_notch_cutoff = 130
+set gyro_lowpass = 80
+set gyro_notch_hz_1 = 400
+set gyro_notch_cutoff_1 = 300
+set gyro_notch_hz_2 = 0
+set gyro_notch_cutoff_2 = 100
 set moron_threshold = 32
 set imu_dcm_kp = 2500
 set imu_dcm_ki = 0
@@ -364,7 +364,7 @@ set baro_tab_size = 21
 set baro_noise_lpf =  0.600
 set baro_cf_vel =  0.985
 set baro_cf_alt =  0.965
-set baro_hardware = AUTO
+set baro_hardware = NONE
 set pid_process_denom = 4
 set blackbox_rate_num = 1
 set blackbox_rate_denom = 1
@@ -372,22 +372,25 @@ set blackbox_device = SDCARD
 set blackbox_on_motor_test = OFF
 set ledstrip_visual_beeper = OFF
 set osd_video_system = 0
-set osd_units = METRIC
-set osd_main_voltage_pos = 62
-set osd_rssi_pos = -1
-set osd_timer_pos = 110
-set osd_throttle_pos = 32
-set osd_cpu_load_pos = 55
-set osd_vtx_channel_pos = -1
-set osd_voltage_warning_pos = -171
-set osd_armed_pos = -198
-set osd_disarmed_pos = -199
-set osd_artificial_horizon = 0
-set osd_horizon_sidebars = -1
-set osd_current_draw_pos = -1
-set osd_mah_drawn_pos = -1
-set osd_craft_name_pos = -57
-set osd_altitude_pos = 82
+set osd_units = IMPERIAL
+set osd_rssi_alarm = 20
+set osd_cap_alarm = 2200
+set osd_time_alarm = 10
+set osd_alt_alarm = 100
+set osd_main_voltage_pos = 2060
+set osd_rssi_pos = 3094
+set osd_flytimer_pos = 2454
+set osd_ontime_pos = 2422
+set osd_flymode_pos = 2412
+set osd_throttle_pos = 129
+set osd_vtx_channel_pos = 200
+set osd_artificial_horizon = 2248
+set osd_current_draw_pos = 97
+set osd_mah_drawn_pos = 111
+set osd_craft_name_pos = 396
+set osd_gps_speed_pos = 66
+set osd_gps_sats_pos = 1410
+set osd_altitude = 161
 
 # profile
 profile 0
@@ -410,21 +413,21 @@ set dterm_notch_cutoff = 160
 set vbat_pid_compensation = OFF
 set pid_at_min_throttle = ON
 set iterm_throttle_gain = 0
-set pterm_srate_ratio = 85
-set dterm_setpoint_weight = 150
+set setpoint_relax_ratio = 70
+set dterm_setpoint_weight = 200
 set yaw_rate_accel_limit = 220
 set rate_accel_limit = 0
 set accum_threshold = 130
 set yaw_accum_threshold = 32
 set yaw_lowpass = 0
 set pid_controller = BETAFLIGHT
-set p_pitch = 50
+set p_pitch = 60
 set i_pitch = 65
-set d_pitch = 20
+set d_pitch = 19
 set p_roll = 45
 set i_roll = 40
-set d_roll = 20
-set p_yaw = 60
+set d_roll = 16
+set p_yaw = 70
 set i_yaw = 45
 set d_yaw = 20
 set p_alt = 50

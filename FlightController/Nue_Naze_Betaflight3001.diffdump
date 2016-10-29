@@ -1,0 +1,61 @@
+# version
+# BetaFlight/NAZE 3.0.1 Oct 18 2016 / 10:19:37 (48b7b4f)
+
+# name
+name Nue
+
+# mixer
+mixer CUSTOM
+
+mmix reset
+
+mmix 0  1.000 -1.000  1.000 -1.000
+mmix 1  1.000 -1.000 -1.000  1.000
+mmix 2  1.000  1.000  1.000  1.000
+mmix 3  1.000  0.000  0.000  0.000
+mmix 4  1.000  1.000 -1.000 -1.000
+
+# servo
+
+# servo mix
+
+
+# feature
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1800 2100
+aux 1 27 3 1800 2100
+aux 2 1 1 900 1200
+aux 3 2 1 1300 1700
+aux 4 12 2 1800 2100
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set min_throttle = 1100
+set motor_pwm_protocol = OFF
+
+# profile
+profile 0
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0

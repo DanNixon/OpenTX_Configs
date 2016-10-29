@@ -59,3 +59,9 @@ rateprofile 0
 
 # rateprofile
 rateprofile 0
+
+set rc_expo = 40
+set rc_yaw_expo = 35
+set roll_srate = 75
+set pitch_srate = 75
+set yaw_srate = 55

@@ -121,7 +121,7 @@ end
 -------------------------------------------------------------------------------
 
 local function drawDIPSwitchLegend()
-  drawDipSwitch(2, 10, 5, {0, 0, 1, 1, nil})
+  drawDipSwitch(2, 10, 5, {0, 0, 1, 1, nil}, "= down, down, up, up, ignore", SMLSIZE)
 
   lcd.drawText(2, 28, "Switch position is indicated by BLACK")
   lcd.drawText(2, 36, "square.")

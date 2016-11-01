@@ -135,10 +135,10 @@ end
 -------------------------------------------------------------------------------
 
 local function drawNexWaveVRXBandDIP()
-  drawDipSwitch(5, 13, 2, {1, 0}, "BOSCAM A")
-  drawDipSwitch(5, 35, 2, {0, 1}, "BOSCAM E")
-  drawDipSwitch(100, 13, 2, {0, 0}, "IRC/FATSHARK")
-  drawDipSwitch(100, 35, 2, {1, 1}, "RACEBAND")
+  drawDipSwitch(5, 11, 2, {1, 0}, "Boscam A")
+  drawDipSwitch(5, 28, 2, {0, 1}, "Boscam E")
+  drawDipSwitch(100, 11, 2, {0, 0}, "IRC/FatShark")
+  drawDipSwitch(100, 28, 2, {1, 1}, "RaceBand")
 
   return "NexWave FatShark vRX DIP switch"
 end
@@ -159,7 +159,7 @@ local function drawIRCFatSharkVTX()
   drawDipSwitch(155, 28, 4, {0, 0, 0, nil}, "CH8", SMLSIZE)
 
   drawDipSwitch(5, 46, 4, {nil, nil, nil, 0}, "IRC/FatShark", SMLSIZE)
-  drawDipSwitch(105, 46, 4, {nil, nil, nil, 1}, "RACEBAND", SMLSIZE)
+  drawDipSwitch(105, 46, 4, {nil, nil, nil, 1}, "RaceBand", SMLSIZE)
 
   return "ImmersionRC FatShark vTX DIP switch"
 end
@@ -181,14 +181,49 @@ local function drawTS5823VTXChannels()
   return "TS5823 vTX DIP switch (channels)"
 end
 
-local function drawTS5823VTXBands()
-  drawDipSwitch(5, 13, 6, {nil, nil, nil, 1, 1, nil}, "BOSCAM A")
-  drawDipSwitch(105, 13, 6, {nil, nil, nil, 0, 1, nil}, "BOSCAM B")
+-------------------------------------------------------------------------------
 
-  drawDipSwitch(5, 35, 6, {nil, nil, nil, 1, 0, nil}, "BOSCAM E")
-  drawDipSwitch(105, 35, 6, {nil, nil, nil, 0, 0, nil}, "FatShark")
+local function drawTS5823VTXBands()
+  drawDipSwitch(5, 11, 6, {nil, nil, nil, 1, 1, nil}, "Boscam A")
+  drawDipSwitch(105, 11, 6, {nil, nil, nil, 0, 1, nil}, "Boscam B")
+
+  drawDipSwitch(5, 28, 6, {nil, nil, nil, 1, 0, nil}, "Boscam E")
+  drawDipSwitch(105, 28, 6, {nil, nil, nil, 0, 0, nil}, "FatShark")
 
   return "TS5823 vTX DIP switch (bands)"
+end
+
+-------------------------------------------------------------------------------
+
+local function drawQX80VTXChannels()
+  drawDipSwitch(5, 11, 6, {1, 1, 1, nil, nil, nil}, "CH1", SMLSIZE)
+  drawDipSwitch(72, 11, 6, {0, 1, 1, nil, nil, nil}, "CH2", SMLSIZE)
+  drawDipSwitch(140, 11, 6, {1, 0, 1, nil, nil, nil}, "CH3", SMLSIZE)
+
+  drawDipSwitch(5, 28, 6, {0, 0, 1, nil, nil, nil}, "CH4", SMLSIZE)
+  drawDipSwitch(72, 28, 6, {1, 1, 0, nil, nil, nil}, "CH5", SMLSIZE)
+  drawDipSwitch(140, 28, 6, {0, 1, 0, nil, nil, nil}, "CH6", SMLSIZE)
+
+  drawDipSwitch(5, 46, 6, {1, 0, 0, nil, nil, nil}, "CH7", SMLSIZE)
+  drawDipSwitch(72, 46, 6, {0, 0, 0, nil, nil, nil}, "CH8", SMLSIZE)
+
+  return "QX80 vTX DIP switch (channels)"
+end
+
+-------------------------------------------------------------------------------
+
+local function drawQX80VTXBands()
+  drawDipSwitch(5, 11, 6, {nil, nil, nil, 1, 1, nil}, "Boscam A")
+  drawDipSwitch(105, 11, 6, {nil, nil, nil, 1, 0, nil}, "Boscam E")
+
+  drawDipSwitch(5, 28, 6, {nil, nil, nil, 0, 0, nil}, "FatShark")
+  drawDipSwitch(105, 28, 6, {nil, nil, nil, 0, 1, nil}, "RaceBand")
+
+  -- TODO: is this correct?
+  drawDipSwitch(5, 46, 6, {nil, nil, nil, nil, nil, 1}, "PAL")
+  drawDipSwitch(105, 46, 6, {nil, nil, nil, nil, nil, 0}, "NTSC")
+
+  return "QX80 vTX DIP switch (bands & mode)"
 end
 
 -------------------------------------------------------------------------------
@@ -212,6 +247,8 @@ local g_screenFunctions = {
   drawIRCFatSharkVTX,
   drawTS5823VTXChannels,
   drawTS5823VTXBands,
+  drawQX80VTXChannels,
+  drawQX80VTXBands,
   drawAbout
 }
 

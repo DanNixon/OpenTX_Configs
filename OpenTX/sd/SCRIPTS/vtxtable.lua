@@ -1,5 +1,4 @@
--- VTX channel table adapted to run from file browser.
--- http://helpmefpv.com/2016/03/16/5-8ghz-vtx-channel-chart-for-frsky-taranis/
+-- VTX cheat sheet.
 
 -------------------------------------------------------------------------------
 
@@ -41,6 +40,8 @@ end
 -------------------------------------------------------------------------------
 
 local function drawFreqTable()
+  -- http://helpmefpv.com/2016/03/16/5-8ghz-vtx-channel-chart-for-frsky-taranis/
+
   lcd.drawLine(1, 10, 208, 10, SOLID, FORCE)
   lcd.drawText(20, 2, "1", 0)
   lcd.drawText(lcd.getLastPos() + 20, 2, "2", 0)

@@ -139,7 +139,55 @@ local function drawNexWaveVRXBandDIP()
   drawDipSwitch(100, 13, 2, {0, 0}, "IRC/FATSHARK")
   drawDipSwitch(100, 35, 2, {1, 1}, "RACEBAND")
 
-  return "NexWave vRX Band Select DIP switch"
+  return "NexWave FatShark vRX DIP switch"
+end
+
+-------------------------------------------------------------------------------
+
+local function drawIRCFatSharkVTX()
+  -- http://www.immersionrc.com/fpv-products/5-8ghz-600mw-av-tx/
+
+  drawDipSwitch(5, 11, 4, {1, 1, 1, nil}, "CH1", SMLSIZE)
+  drawDipSwitch(55, 11, 4, {0, 1, 1, nil}, "CH2", SMLSIZE)
+  drawDipSwitch(105, 11, 4, {1, 0, 1, nil}, "CH3", SMLSIZE)
+  drawDipSwitch(155, 11, 4, {1, 1, 1, nil}, "CH4", SMLSIZE)
+
+  drawDipSwitch(5, 28, 4, {0, 1, 0, nil}, "CH5", SMLSIZE)
+  drawDipSwitch(55, 28, 4, {1, 0, 0, nil}, "CH6", SMLSIZE)
+  drawDipSwitch(105, 28, 4, {1, 0, 0, nil}, "CH7", SMLSIZE)
+  drawDipSwitch(155, 28, 4, {0, 0, 0, nil}, "CH8", SMLSIZE)
+
+  drawDipSwitch(5, 46, 4, {nil, nil, nil, 0}, "IRC/FatShark", SMLSIZE)
+  drawDipSwitch(105, 46, 4, {nil, nil, nil, 1}, "RACEBAND", SMLSIZE)
+
+  return "ImmersionRC FatShark vTX DIP switch"
+end
+
+-------------------------------------------------------------------------------
+
+local function drawTS5823VTXChannels()
+  drawDipSwitch(5, 11, 6, {1, 1, 1, nil, nil, nil}, "CH1", SMLSIZE)
+  drawDipSwitch(72, 11, 6, {0, 1, 1, nil, nil, nil}, "CH2", SMLSIZE)
+  drawDipSwitch(140, 11, 6, {1, 0, 1, nil, nil, nil}, "CH3", SMLSIZE)
+
+  drawDipSwitch(5, 28, 6, {1, 1, 1, nil, nil, nil}, "CH4", SMLSIZE)
+  drawDipSwitch(72, 28, 6, {0, 1, 0, nil, nil, nil}, "CH5", SMLSIZE)
+  drawDipSwitch(140, 28, 6, {1, 0, 0, nil, nil, nil}, "CH6", SMLSIZE)
+
+  drawDipSwitch(5, 46, 6, {1, 0, 0, nil, nil, nil}, "CH7", SMLSIZE)
+  drawDipSwitch(72, 46, 6, {0, 0, 0, nil, nil, nil}, "CH8", SMLSIZE)
+
+  return "TS5823 vTX DIP switch (channels)"
+end
+
+local function drawTS5823VTXBands()
+  drawDipSwitch(5, 13, 6, {nil, nil, nil, 1, 1, nil}, "BOSCAM A")
+  drawDipSwitch(105, 13, 6, {nil, nil, nil, 0, 1, nil}, "BOSCAM B")
+
+  drawDipSwitch(5, 35, 6, {nil, nil, nil, 1, 0, nil}, "BOSCAM E")
+  drawDipSwitch(105, 35, 6, {nil, nil, nil, 0, 0, nil}, "FatShark")
+
+  return "TS5823 vTX DIP switch (bands)"
 end
 
 -------------------------------------------------------------------------------
@@ -160,6 +208,9 @@ local g_screenFunctions = {
   drawFreqTable,
   drawDIPSwitchLegend,
   drawNexWaveVRXBandDIP,
+  drawIRCFatSharkVTX,
+  drawTS5823VTXChannels,
+  drawTS5823VTXBands,
   drawAbout
 }
 

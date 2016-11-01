@@ -1,9 +1,11 @@
 -- VTX channel table adapted to run from file browser.
 -- http://helpmefpv.com/2016/03/16/5-8ghz-vtx-channel-chart-for-frsky-taranis/
 
-local function run_func(event)
-  lcd.clear()
+local g_screen
 
+-------------------------------------------------------------------------------
+
+local function draw_freq_table()
   lcd.drawLine(1, 10, 208, 10, SOLID, FORCE)
   lcd.drawText(20, 2, "1", 0)
   lcd.drawText(lcd.getLastPos() + 20, 2, "2", 0)
@@ -78,7 +80,39 @@ local function run_func(event)
   lcd.drawText(lcd.getLastPos() + 5, 52, "5880", 0)
   lcd.drawText(lcd.getLastPos() + 5, 52, "5917", 0)
 
+  return nil
+end
+
+local g_screenFunctions = {draw_freq_table}
+
+-------------------------------------------------------------------------------
+
+local function init_func()
+  g_screen = 0
+end
+
+-------------------------------------------------------------------------------
+
+local function run_func(event)
+  if event == EVT_PLUS_BREAK then
+    g_screen = g_screen + 1
+  elseif event == EVT_MINUS_BREAK then
+    g_screen = g_screen - 1
+  elseif event == EVT_EXIT_BREAK then
+    return 1
+  end
+
+  lcd.clear()
+
+  local name = g_screenFunctions[g_screen]()
+
+  if name ~= nil then
+    lcd.drawScreenTitle(name, g_screen, 2)
+  end
+
   return 0
 end
 
-return { run=run_func }
+-------------------------------------------------------------------------------
+
+return { init=init_func, run=run_func }

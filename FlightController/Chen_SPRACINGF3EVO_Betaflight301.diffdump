@@ -1,3 +1,4 @@
+
 # version
 # BetaFlight/SPRACINGF3EVO 3.0.1 Oct 18 2016 / 10:36:44 (48b7b4f)
 
@@ -56,7 +57,19 @@ set pid_process_denom = 2
 # profile
 profile 0
 
+set p_pitch = 62
+set i_pitch = 48
+set p_roll = 58
+set i_roll = 38
+set p_yaw = 72
+set i_yaw = 42
 rateprofile 0
 
 # rateprofile
 rateprofile 0
+
+set rc_rate = 110
+set rc_rate_yaw = 105
+set rc_expo = 10
+set roll_srate = 80
+set pitch_srate = 80

@@ -1,11 +1,46 @@
 -- VTX channel table adapted to run from file browser.
 -- http://helpmefpv.com/2016/03/16/5-8ghz-vtx-channel-chart-for-frsky-taranis/
 
-local g_screen
+-------------------------------------------------------------------------------
+
+local function drawDipSwitch(x, y, numSwitches, positions, labelText, labelTextFlags)
+  local switchPadding = 2
+  local outerPadding = 1
+  local switchWidth = 5
+  local switchHeight = 9
+
+  -- Draw outer rect
+  local rw = (2 * outerPadding) + switchPadding + ((switchWidth + switchPadding) * numSwitches)
+  local rh = (2 * (switchPadding + outerPadding)) + switchHeight
+  lcd.drawRectangle(x, y, rw, rh)
+
+  -- Draw switches
+  local sy = y + outerPadding + switchPadding
+  local halfSwitchHeight = switchHeight / 2
+  for i = 1,numSwitches do
+    local sx = x + outerPadding + switchPadding + ((i - 1) * (switchPadding + switchWidth))
+    lcd.drawRectangle(sx, sy, switchWidth, switchHeight)
+
+    -- Set switch state
+    local swState = positions[i]
+    if swState ~= nil then
+      swState = (swState + 1) % 2
+      local spy = sy + 1 + (halfSwitchHeight * swState)
+      lcd.drawFilledRectangle(sx, spy, switchWidth, halfSwitchHeight - 1, FORCE)
+    end
+  end
+
+  -- Draw label
+  if labelText ~= nil then
+    local tx = x + rw + (2 * outerPadding)
+    local ty = y + 4
+    lcd.drawText(tx, ty, labelText, labelTextFlags)
+  end
+end
 
 -------------------------------------------------------------------------------
 
-local function draw_freq_table()
+local function drawFreqTable()
   lcd.drawLine(1, 10, 208, 10, SOLID, FORCE)
   lcd.drawText(20, 2, "1", 0)
   lcd.drawText(lcd.getLastPos() + 20, 2, "2", 0)
@@ -83,31 +118,92 @@ local function draw_freq_table()
   return nil
 end
 
-local g_screenFunctions = {draw_freq_table}
+-------------------------------------------------------------------------------
+
+local function drawDIPSwitchLegend()
+  drawDipSwitch(2, 10, 5, {0, 0, 1, 1, nil})
+
+  lcd.drawText(2, 28, "Switch position is indicated by BLACK")
+  lcd.drawText(2, 36, "square.")
+  lcd.drawText(2, 45, "No black square indicates switch")
+  lcd.drawText(2, 53, "position is unimportant.")
+
+  return "DIP switch legend"
+end
+
+-------------------------------------------------------------------------------
+
+local function drawNexWaveVRXBandDIP()
+  drawDipSwitch(5, 13, 2, {1, 0}, "BOSCAM A")
+  drawDipSwitch(5, 35, 2, {0, 1}, "BOSCAM E")
+  drawDipSwitch(100, 13, 2, {0, 0}, "IRC/FATSHARK")
+  drawDipSwitch(100, 35, 2, {1, 1}, "RACEBAND")
+
+  return "NexWave vRX Band Select DIP switch"
+end
+
+-------------------------------------------------------------------------------
+
+local function drawAbout()
+  lcd.drawText(2, 10, "5.8GHz FPV cheatsheet", MIDSIZE)
+  lcd.drawText(2, 25, "github.com/DanNixon/RC_Configs", SMLSIZE)
+
+  return "About"
+end
+
+-------------------------------------------------------------------------------
+
+local g_screen
+local g_numScreens
+
+local g_screenFunctions = {
+  drawFreqTable,
+  drawDIPSwitchLegend,
+  drawNexWaveVRXBandDIP,
+  drawAbout
+}
 
 -------------------------------------------------------------------------------
 
 local function init_func()
-  g_screen = 0
+  -- Count the number of defined screens
+  g_screen = 1
+  g_numScreens = 0
+  while (g_screenFunctions[g_screen] ~= nil) do
+    g_screen = g_screen + 1
+    g_numScreens = g_numScreens + 1
+  end
+
+  g_screen = 1
 end
 
 -------------------------------------------------------------------------------
 
 local function run_func(event)
+  -- Handle plus button (next page)
   if event == EVT_PLUS_BREAK then
     g_screen = g_screen + 1
+    if (g_screen > g_numScreens) then
+      g_screen = 1
+    end
+  -- Handle minus button (previous page)
   elseif event == EVT_MINUS_BREAK then
     g_screen = g_screen - 1
+    if (g_screen < 1) then
+      g_screen = g_numScreens
+    end
+  -- Handle exit button (terminate)
   elseif event == EVT_EXIT_BREAK then
     return 1
   end
 
+  -- Redraw
   lcd.clear()
-
   local name = g_screenFunctions[g_screen]()
 
+  -- Draw title if this screen has a name
   if name ~= nil then
-    lcd.drawScreenTitle(name, g_screen, 2)
+    lcd.drawScreenTitle(name, g_screen, g_numScreens)
   end
 
   return 0

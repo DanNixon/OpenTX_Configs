@@ -121,9 +121,13 @@ end
 -------------------------------------------------------------------------------
 
 local function drawDIPSwitchLegend()
-  drawDipSwitch(5, 13, 1, {1}, "UP")
-  drawDipSwitch(100, 13, 1, {0}, "DOWN")
-  drawDipSwitch(5, 35, 1, {nil}, "Not Important")
+  drawDipSwitch(2, 10, 5, {0, 0, 1, 1, nil})
+
+  lcd.drawText(2, 28, "Switch position is indicated by BLACK")
+  lcd.drawText(2, 36, "square.")
+  lcd.drawText(2, 45, "No black square indicates switch")
+  lcd.drawText(2, 53, "position is unimportant.")
+
   return "DIP switch legend"
 end
 
@@ -134,6 +138,7 @@ local function drawNexWaveVRXBandDIP()
   drawDipSwitch(5, 35, 2, {0, 1}, "BOSCAM E")
   drawDipSwitch(100, 13, 2, {0, 0}, "IRC/FATSHARK")
   drawDipSwitch(100, 35, 2, {1, 1}, "RACEBAND")
+
   return "NexWave vRX Band Select DIP switch"
 end
 
@@ -142,6 +147,7 @@ end
 local function drawAbout()
   lcd.drawText(2, 10, "5.8GHz FPV cheatsheet", MIDSIZE)
   lcd.drawText(2, 25, "github.com/DanNixon/RC_Configs", SMLSIZE)
+
   return "About"
 end
 

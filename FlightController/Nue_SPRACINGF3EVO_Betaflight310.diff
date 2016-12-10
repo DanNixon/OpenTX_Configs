@@ -1,0 +1,65 @@
+# version
+# Betaflight/SPRACINGF3EVO 3.1.0 Dec 10 2016 / 15:08:25 (678d2f8)
+
+# name
+
+# resources
+resource MOTOR 3 A03
+resource MOTOR 4 A02
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PPM
+feature -VBAT
+feature -CURRENT_METER
+feature -RSSI_ADC
+feature -TRANSPONDER
+feature RX_SERIAL
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 1 32 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1800 2100
+aux 1 27 1 1800 2100
+aux 2 1 4 900 1200
+aux 3 2 4 1350 1650
+aux 4 12 2 1800 2100
+aux 5 25 3 1800 2100
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set min_throttle = 1075
+set serialrx_provider = SBUS
+set sdcard_dma = OFF
+
+# profile
+profile 0
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0

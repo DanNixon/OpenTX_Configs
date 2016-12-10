@@ -1,0 +1,75 @@
+
+# version
+# BetaFlight/SPRACINGF3EVO 3.0.1 Oct 18 2016 / 10:36:44 (48b7b4f)
+
+# name
+name Chen
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PPM
+feature -CURRENT_METER
+feature -RSSI_ADC
+feature -BLACKBOX
+feature -TRANSPONDER
+feature RX_SERIAL
+feature MOTOR_STOP
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1800 2100
+aux 1 27 2 1800 2100
+aux 2 1 1 900 1200
+aux 3 2 1 1350 1650
+aux 4 12 3 1800 2100
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set motor_pwm_protocol = BRUSHED
+set serialrx_provider = SBUS
+set pid_process_denom = 2
+
+# profile
+profile 0
+
+set p_pitch = 62
+set i_pitch = 48
+set p_roll = 58
+set i_roll = 38
+set p_yaw = 72
+set i_yaw = 42
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+set rc_rate = 110
+set rc_rate_yaw = 105
+set rc_expo = 10
+set roll_srate = 80
+set pitch_srate = 80

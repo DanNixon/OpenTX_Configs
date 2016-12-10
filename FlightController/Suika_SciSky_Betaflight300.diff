@@ -32,9 +32,7 @@ serial 1 64 115200 57600 0 115200
 
 # aux
 aux 0 0 0 1900 2100
-aux 1 27 2 1900 2100
-aux 2 1 1 900 1150
-aux 3 2 1 1350 1650
+aux 1 27 1 1900 2100
 
 # adjrange
 
@@ -44,11 +42,14 @@ aux 3 2 1 1350 1650
 
 # master
 set motor_pwm_protocol = BRUSHED
+set gyro_sync_denom = 5
+set acc_hardware = NONE
 
 # profile
 profile 0
 
-set d_roll = 22
+set d_pitch = 30
+set d_roll = 30
 set i_level = 55
 set d_level = 90
 rateprofile 0
@@ -56,7 +57,6 @@ rateprofile 0
 # rateprofile
 rateprofile 0
 
-set rc_rate = 155
-set rc_rate_yaw = 120
+set rc_rate = 110
 set pitch_srate = 75
-set yaw_srate = 90
+set yaw_srate = 85

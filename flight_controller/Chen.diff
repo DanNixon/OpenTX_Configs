@@ -2,7 +2,6 @@
 # BetaFlight/SPRACINGF3EVO 3.0.1 Oct 18 2016 / 10:36:44 (48b7b4f)
 
 # name
-name Koishi
 
 # mixer
 
@@ -15,7 +14,6 @@ name Koishi
 feature -RX_PPM
 feature -TELEMETRY
 feature -CURRENT_METER
-feature -RSSI_ADC
 feature -BLACKBOX
 feature -TRANSPONDER
 feature RX_SERIAL
@@ -39,7 +37,7 @@ serial 2 64 115200 57600 0 115200
 aux 0 0 0 1800 2100
 aux 1 27 2 1800 2100
 aux 2 1 1 900 1200
-aux 3 2 1 1350 1650
+aux 3 2 1 1300 1700
 aux 4 12 3 1800 2100
 
 # adjrange
@@ -49,27 +47,14 @@ aux 4 12 3 1800 2100
 # rxfail
 
 # master
+set min_throttle = 1050
 set motor_pwm_protocol = BRUSHED
 set serialrx_provider = SBUS
-set pid_process_denom = 2
 
 # profile
 profile 0
 
-set p_pitch = 70
-set d_pitch = 25
-set p_roll = 65
-set i_roll = 45
-set d_roll = 30
-set p_yaw = 85
-set i_yaw = 42
 rateprofile 0
 
 # rateprofile
 rateprofile 0
-
-set rc_rate = 75
-set rc_rate_yaw = 145
-set rc_expo = 10
-set roll_srate = 90
-set pitch_srate = 90

@@ -5,6 +5,10 @@
 name KappaFPV
 
 # resources
+resource MOTOR 1 A03
+resource MOTOR 2 A02
+resource MOTOR 3 B09
+resource MOTOR 4 B08
 
 # mixer
 

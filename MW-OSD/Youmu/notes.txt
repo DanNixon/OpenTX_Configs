@@ -1,4 +1,0 @@
-Using the bold font.
-
-Layout is a modified version of the "F15" standard layout.
-Battery and RSSI in lower left corner, altitude and timer in lower right corner.

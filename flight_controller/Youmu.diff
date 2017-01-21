@@ -1,0 +1,78 @@
+# version
+# Betaflight / OMNIBUS 3.1.0 Jan 21 2017 / 12:53:34 (977d696)
+
+# name
+name KappaFPV
+
+# resources
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PPM
+feature -CURRENT_METER
+feature RX_SERIAL
+feature TELEMETRY
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 1 32 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1800 2100
+aux 1 27 2 1800 2100
+aux 2 1 1 900 1200
+aux 3 2 1 1300 1700
+aux 4 12 3 1800 2100
+aux 5 25 4 1800 2100
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set min_throttle = 1040
+set motor_pwm_protocol = ONESHOT42
+set serialrx_provider = SBUS
+set baro_hardware = AUTO
+set osd_units = METRIC
+set osd_time_alarm = 5
+set osd_alt_alarm = 50
+set osd_main_voltage_pos = 2372
+set osd_rssi_pos = 1046
+set osd_flytimer_pos = 2404
+set osd_ontime_pos = 374
+set osd_flymode_pos = 364
+set osd_artificial_horizon = 200
+set osd_craft_name_pos = 2497
+set osd_gps_sats_pos = 1410
+set osd_altitude_pos = 2436
+set osd_pid_roll_pos = 322
+set osd_pid_pitch_pos = 354
+set osd_pid_yaw_pos = 386
+
+# profile
+profile 0
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0

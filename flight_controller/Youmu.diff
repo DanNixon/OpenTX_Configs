@@ -57,6 +57,7 @@ set min_throttle = 1040
 set motor_pwm_protocol = ONESHOT42
 set serialrx_provider = SBUS
 set baro_hardware = AUTO
+set pid_process_denom = 2
 set osd_units = METRIC
 set osd_time_alarm = 5
 set osd_alt_alarm = 50
@@ -76,7 +77,16 @@ set osd_pid_yaw_pos = 386
 # profile
 profile 0
 
+set p_pitch = 50
+set d_pitch = 20
+set p_yaw = 60
 rateprofile 0
 
 # rateprofile
 rateprofile 0
+
+set rc_rate = 105
+set rc_rate_yaw = 110
+set roll_srate = 75
+set pitch_srate = 78
+set yaw_srate = 80

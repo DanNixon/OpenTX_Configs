@@ -1,5 +1,5 @@
 # version
-# Betaflight / OMNIBUS 3.1.0 Jan 21 2017 / 12:53:34 (977d696)
+# Betaflight / OMNIBUS 3.1.0 Jan 29 2017 / 11:49:50 (88693ca)
 
 # name
 name KappaFPV
@@ -59,20 +59,18 @@ set serialrx_provider = SBUS
 set baro_hardware = AUTO
 set pid_process_denom = 2
 set osd_units = METRIC
+set osd_cap_alarm = 1000
 set osd_time_alarm = 5
-set osd_alt_alarm = 50
-set osd_main_voltage_pos = 2372
+set osd_alt_alarm = 25
+set osd_main_voltage_pos = 2405
 set osd_rssi_pos = 1046
-set osd_flytimer_pos = 2404
+set osd_flytimer_pos = 2437
 set osd_ontime_pos = 374
 set osd_flymode_pos = 364
+set osd_throttle_pos = 2518
 set osd_artificial_horizon = 200
-set osd_craft_name_pos = 2497
 set osd_gps_sats_pos = 1410
-set osd_altitude_pos = 2436
-set osd_pid_roll_pos = 322
-set osd_pid_pitch_pos = 354
-set osd_pid_yaw_pos = 386
+set osd_altitude_pos = 2510
 
 # profile
 profile 0

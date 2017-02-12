@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Converts an audio file for the Taranis
+# Single channel Wave at 32k
+
+INPUT_FILENAME="$1"
+
+if ! [ -e "$INPUT_FILENAME" ]
+then
+  echo "Input file does not exist."
+  exit
+fi
+
+OUTPUT_FILENAME=`echo $1 | sed -e "s/\.[a-zA-Z0-9]\+/\.wav/g"`
+
+ffmpeg -i "$INPUT_FILENAME" -ac 1 -ar 32000 "$OUTPUT_FILENAME"

@@ -1,4 +1,4 @@
--- Stick command cheatsheet for MultiWii, BaseFlight, CleanFLight and
+-- Stick command cheatsheet for MultiWii, BaseFlight, CleanFlight and
 -- BetaFlight.
 
 -------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ local g_stickCommands = {
   {"Disable LCD Page Cycle", {-1, -1, 1, 0}},
   {"Enable LCD Page Cycle", {-1, 1, 1, 0}},
   {"Save Settings", {-1, 1, -1, -1}},
-  {"Enter Betaflight OSD Menu", {0, 0, 1, 1}},
+  {"Enter Betaflight CMS", {0, 0, 1, -1}},
   {"About", nil}
 }
 

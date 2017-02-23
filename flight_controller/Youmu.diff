@@ -1,90 +1,34 @@
-# version
-# Betaflight / OMNIBUS 3.1.0 Jan 29 2017 / 11:49:50 (88693ca)
-
-# name
-name KappaFPV
-
-# resources
+# Betaflight / OMNIBUS 3.1.2 Feb 22 2017 / 18:15:23 (70807d0)
+name Kappa-FPV
 resource MOTOR 1 A03
 resource MOTOR 2 A02
 resource MOTOR 3 B09
 resource MOTOR 4 B08
 
-# mixer
-
-# servo
-
-# servo mix
-
-
-# feature
 feature -RX_PPM
 feature -CURRENT_METER
 feature RX_SERIAL
 feature TELEMETRY
-
-# beeper
-
-# map
 map TAER1234
-
-# serial
 serial 1 32 115200 57600 0 115200
 serial 2 64 115200 57600 0 115200
-
-# led
-
-# color
-
-# mode_color
-
-# aux
-aux 0 0 0 1800 2100
-aux 1 27 2 1800 2100
+aux 0 0 0 1700 2100
+aux 1 27 2 1700 2100
 aux 2 1 1 900 1200
 aux 3 2 1 1300 1700
-aux 4 12 3 1800 2100
-aux 5 25 4 1800 2100
-
-# adjrange
-
-# rxrange
-
-# rxfail
-
-# master
-set min_throttle = 1040
-set motor_pwm_protocol = ONESHOT42
+aux 4 12 3 1700 2100
+aux 5 25 4 1700 2100
+set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
-set baro_hardware = AUTO
 set pid_process_denom = 2
-set osd_units = METRIC
-set osd_cap_alarm = 1000
-set osd_time_alarm = 5
-set osd_alt_alarm = 25
-set osd_main_voltage_pos = 2405
-set osd_rssi_pos = 1046
-set osd_flytimer_pos = 2437
-set osd_ontime_pos = 374
+set osd_vbat_pos = 2373
+set osd_flytimer_pos = 2405
+set osd_ontimer_pos = 374
 set osd_flymode_pos = 364
-set osd_throttle_pos = 2518
-set osd_artificial_horizon = 200
-set osd_gps_sats_pos = 1410
-set osd_altitude_pos = 2510
-
-# profile
+set osd_throttle_pos = 2511
+set osd_horizon_pos = 200
+set osd_altitude_pos = 2517
 profile 0
 
-set p_pitch = 50
-set d_pitch = 20
-set p_yaw = 60
 rateprofile 0
-
-# rateprofile
 rateprofile 0
-
-set rc_rate = 105
-set rc_rate_yaw = 110
-set roll_srate = 75
-set pitch_srate = 78
-set yaw_srate = 80

@@ -1,7 +1,15 @@
+# diff
+
 # version
-# BetaFlight/SPRACINGF3 3.0.1 Oct 18 2016 / 10:35:52 (48b7b4f)
+# Betaflight / OMNIBUSF4 3.1.6 Feb 21 2017 / 14:33:46 (1fd502c)
 
 # name
+name Kappa-FPV
+
+# resources
+resource MOTOR 1 B01
+resource MOTOR 2 A03
+resource MOTOR 3 B00
 
 # mixer
 
@@ -11,8 +19,6 @@
 
 
 # feature
-feature -RX_PPM
-feature RX_SERIAL
 feature LED_STRIP
 
 # beeper
@@ -21,15 +27,15 @@ feature LED_STRIP
 map TAER1234
 
 # serial
-serial 2 64 115200 57600 0 115200
+serial 0 64 115200 57600 0 115200
 
 # led
-led 0 0,0:S:AO:2
+led 0 0,0:S:CO:2
 led 1 1,0:S:CO:2
 led 2 2,0:S:AO:0
 led 3 3,0:S:AO:0
 led 4 4,0:S:CO:2
-led 5 5,0:S:AO:2
+led 5 5,0:S:CO:2
 
 # color
 
@@ -37,12 +43,12 @@ led 5 5,0:S:AO:2
 mode_color 6 1 2
 
 # aux
-aux 0 0 0 1700 2100
-aux 1 27 2 1700 2100
+aux 0 0 0 1800 2100
+aux 1 27 2 1800 2100
 aux 2 1 1 900 1200
 aux 3 2 1 1300 1700
-aux 4 12 3 1700 2100
-aux 5 25 4 1700 2100
+aux 4 12 3 1800 2100
+aux 5 25 4 1800 2100
 
 # adjrange
 
@@ -52,9 +58,16 @@ aux 5 25 4 1700 2100
 
 # master
 set rssi_channel = 16
+set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
-set align_board_yaw = -45
-set gyro_sync_denom = 2
+set osd_vbat_pos = 2406
+set osd_rssi_pos = 2452
+set osd_flytimer_pos = 2438
+set osd_ontimer_pos = 374
+set osd_flymode_pos = 2496
+set osd_throttle_pos = 2540
+set osd_horizon_pos = 200
+set osd_craft_name_pos = 2528
 
 # profile
 profile 0

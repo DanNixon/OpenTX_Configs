@@ -1,7 +1,7 @@
+name Chen
 feature -RX_PPM
 feature -TELEMETRY
-feature -CURRENT_METER
-feature -BLACKBOX
+feature -RSSI_ADC
 feature -TRANSPONDER
 feature RX_SERIAL
 feature MOTOR_STOP
@@ -12,10 +12,22 @@ aux 1 27 2 1800 2100
 aux 2 1 1 900 1200
 aux 3 2 1 1300 1700
 aux 4 12 3 1800 2100
-set min_throttle = 1050
+set acc_trim_pitch = 2
 set serialrx_provider = SBUS
+set min_throttle = 1050
+set deadband = 1
+set yaw_deadband = 1
+set pid_process_denom = 2
 profile 0
+set p_pitch = 60
+set p_roll = 45
+set p_yaw = 80
 rateprofile 0
 set rc_rate = 75
-set rc_expo = 25
-set rc_yaw_expo = 15
+set rc_rate_yaw = 110
+set rc_expo = 12
+set rc_expo_yaw = 5
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 80
+

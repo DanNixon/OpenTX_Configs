@@ -1,6 +1,7 @@
-# Betaflight / DOGE 3.2.0 Jul  8 2017 / 12:10:51 (6fc3c0c)
+# Betaflight / DOGE (DOGE) 3.2.0 Aug 17 2017 / 13:44:30 (b64ab34)
 resource MOTOR 2 A10
 resource MOTOR 3 B09
+
 feature -RX_PPM
 feature RX_SERIAL
 feature TELEMETRY
@@ -12,12 +13,14 @@ aux 0 0 0 1800 2100
 aux 1 13 2 1800 2100
 aux 2 28 1 1800 2100
 set serialrx_provider = SBUS
-set blackbox_rate_denom = 8
 set blackbox_device = SPIFLASH
 set motor_pwm_protocol = DSHOT600
 set current_meter = ADC
+set beeper_dshot = OFF
 set pid_process_denom = 1
 profile 0
+
 rateprofile 0
+
 set rc_expo = 15
 set rc_expo_yaw = 10

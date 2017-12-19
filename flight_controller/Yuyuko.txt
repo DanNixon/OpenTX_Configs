@@ -1,5 +1,7 @@
+diff
+
 # version
-# Betaflight / OMNIBUSF4 3.1.3 Feb  2 2017 / 13:47:48 (73b498e)
+# Betaflight / OMNIBUSF4 (OBF4) 3.2.3 Dec 11 2017 / 07:56:31 (cb962eda1) MSP API: 1.36
 
 # name
 
@@ -18,7 +20,6 @@ resource MOTOR 4 B01
 
 # feature
 feature TELEMETRY
-feature VTX
 
 # beeper
 
@@ -37,39 +38,67 @@ serial 2 2048 115200 57600 0 115200
 
 # aux
 aux 0 0 0 1800 2100
-aux 1 27 2 1800 2100
-aux 2 1 1 900 1200
-aux 3 2 1 1300 1700
-aux 4 12 3 1800 2100
-aux 5 25 4 1800 2100
+aux 1 1 1 900 1200
+aux 2 13 3 1800 2100
+aux 3 28 2 1800 2100
+aux 4 36 5 1600 2100
 
 # adjrange
 
 # rxrange
 
+# vtx
+
 # rxfail
 
 # master
 set rssi_channel = 16
-set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
-set tlm_inversion = OFF
+set motor_pwm_protocol = DSHOT300
+set current_meter = NONE
 set pid_process_denom = 2
-set blackbox_rate_denom = 4
 set osd_rssi_alarm = 50
-set osd_time_alarm = 3
-set osd_vbat_pos = 2405
-set osd_rssi_pos = 2373
-set osd_flytimer_pos = 2437
-set osd_ontimer_pos = 374
+set osd_tim1 = 2561
+set osd_vbat_pos = 2437
+set osd_rssi_pos = 2418
+set osd_tim_1_pos = 2450
+set osd_tim_2_pos = 33
 set osd_flymode_pos = 2514
 set osd_throttle_pos = 2520
-set osd_horizon_pos = 200
+set osd_vtx_channel_pos = 377
+set osd_crosshairs = 200
+set osd_ah_sbar = 200
+set osd_ah_pos = 200
+set osd_current_pos = 385
+set osd_mah_drawn_pos = 353
+set osd_craft_name_pos = 362
+set osd_gps_speed_pos = 218
+set osd_gps_lon_pos = 82
+set osd_gps_lat_pos = 65
+set osd_gps_sats_pos = 51
+set osd_home_dir_pos = 302
+set osd_home_dist_pos = 303
+set osd_compass_bar_pos = 266
+set osd_altitude_pos = 247
+set osd_pid_roll_pos = 423
+set osd_pid_pitch_pos = 455
+set osd_pid_yaw_pos = 487
+set osd_debug_pos = 1
+set osd_power_pos = 321
+set osd_pidrate_profile_pos = 345
+set osd_avg_cell_voltage_pos = 2405
+set osd_pit_ang_pos = 257
+set osd_rol_ang_pos = 289
+set osd_battery_usage_pos = 392
+set osd_disarmed_pos = 138
+set osd_nheading_pos = 311
+set osd_nvario_pos = 279
+set osd_esc_tmp_pos = 82
+set osd_esc_rpm_pos = 83
 
 # profile
 profile 0
 
-rateprofile 0
 
 # rateprofile
 rateprofile 0

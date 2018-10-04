@@ -1,4 +1,0 @@
-map TAER1234
-serial 0 64 115200 57600 0 115200
-aux 0 0 0 1600 2100
-set serialrx_provider = SBUS

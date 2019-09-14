@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Mounts a Turnigy 9XR PRO when connected with the bootloader running
-# Makes horrible assumptions about the paths of the devices
-
-echo "Mount... "
-udisksctl mount -b /dev/sdb1
-udisksctl mount -b /dev/sdc
-echo "done."

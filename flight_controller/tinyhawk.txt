@@ -1,8 +1,3 @@
-# 
-
-# diff
-###WARNING: NO CUSTOM DEFAULTS FOUND###
-
 # version
 # Betaflight / STM32F411 (S411) 4.1.0 Oct 16 2019 / 11:57:34 (c37a7c91a) MSP API: 1.42
 # manufacturer_id: MTKS   board_name: MATEKF411RX   custom defaults: NO
@@ -176,7 +171,8 @@ set osd_warn_gps_rescue_disabled = OFF
 set osd_warn_rssi = ON
 set osd_cap_alarm = 450
 set osd_vbat_pos = 343
-set osd_rssi_pos = 2455
+set osd_rssi_pos = 407
+set osd_rssi_dbm_pos = 65
 set osd_tim_2_pos = 2401
 set osd_flymode_pos = 65
 set osd_vtx_channel_pos = 353
@@ -186,7 +182,7 @@ set osd_pid_roll_pos = 353
 set osd_pid_pitch_pos = 34
 set osd_pidrate_profile_pos = 186
 set osd_warnings_pos = 2185
-set osd_avg_cell_voltage_pos = 2423
+set osd_avg_cell_voltage_pos = 2379
 set osd_flip_arrow_pos = 310
 set osd_rate_profile_name_pos = 23
 set osd_pid_profile_name_pos = 2
@@ -216,60 +212,26 @@ set gyro_1_align_yaw = 1800
 set gyro_2_spibus = 1
 set name = Kappa FPV
 
-profile 0
-
-# profile 0
-set dyn_lpf_dterm_min_hz = 0
-set dyn_lpf_dterm_max_hz = 250
-set dterm_lowpass_hz = 100
-set dterm_lowpass2_hz = 200
-set feedforward_transition = 25
-set acc_limit_yaw = 100
-set crash_recovery = ON
-set iterm_relax = RPY
-set iterm_relax_type = GYRO
-set iterm_relax_cutoff = 11
-set iterm_windup = 40
-set iterm_limit = 150
-set throttle_boost = 4
-set p_pitch = 105
-set i_pitch = 125
-set d_pitch = 95
-set f_pitch = 100
-set p_roll = 105
-set i_roll = 125
-set d_roll = 95
-set f_roll = 100
-set p_yaw = 95
-set i_yaw = 95
-set d_yaw = 45
-set angle_level_strength = 60
-set horizon_transition = 80
-set level_limit = 30
-set horizon_tilt_effect = 80
-set horizon_tilt_expert_mode = ON
-set d_min_roll = 0
-set d_min_pitch = 0
-set auto_profile_cell_count = 1
-set launch_control_mode = PITCHONLY
+profile 1
 
 rateprofile 0
 
 # rateprofile 0
-set thr_expo = 50
-set roll_rc_rate = 80
-set pitch_rc_rate = 80
-set yaw_rc_rate = 80
-set roll_expo = 60
-set pitch_expo = 60
-set yaw_expo = 20
-set roll_srate = 60
-set pitch_srate = 60
-set yaw_srate = 60
+set thr_mid = 20
+set thr_expo = 70
+set roll_rc_rate = 150
+set pitch_rc_rate = 150
+set yaw_rc_rate = 205
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 25
+set roll_srate = 65
+set pitch_srate = 65
+set yaw_srate = 35
 set tpa_rate = 25
 set tpa_breakpoint = 1650
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 80
 
 # end the command batch
 batch end
-
-# 
